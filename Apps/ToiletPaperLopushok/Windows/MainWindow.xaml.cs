@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using ToiletPaperLopushok.Classes;
 
 namespace ToiletPaperLopushok
 {
@@ -10,7 +11,8 @@ namespace ToiletPaperLopushok
         public MainWindow()
         {
             InitializeComponent();
-            this.Title = "Информационная система производственной компании \"Лопушок\"";
+            TitlePageLabel.Content = Manager.TitlePage; /* Выводим основной заголовок страницы */
+            this.Title = "Информационная система производственной компании \"Лопушок\""; /* Задаем заголовок основного окна приложения */
         }
     }
 }
