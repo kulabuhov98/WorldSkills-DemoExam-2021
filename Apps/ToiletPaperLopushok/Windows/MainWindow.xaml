@@ -19,6 +19,7 @@
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
             <Image Source="/Resources/Logotype.png" Opacity=".1" Width="400"/>
         </StackPanel>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
