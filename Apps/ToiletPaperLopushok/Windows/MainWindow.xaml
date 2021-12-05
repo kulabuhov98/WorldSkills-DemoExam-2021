@@ -13,8 +13,12 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" Background="#CEFFF9"/>
-        <Image Source="/Resources/Logotype.png" HorizontalAlignment="Left" Margin="5"/>
+        <Image Source="/Resources/Icon.ico" HorizontalAlignment="Left" Margin="5"/>
         <Label x:Name="TitlePageLabel" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"/>
-       
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <Image Source="/Resources/Logotype.png" Opacity=".1" Width="400"/>
+        </StackPanel>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
