@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToiletPaperLopushok"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" FontFamily="Gabriola">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="/Resources/Logotype.png" HorizontalAlignment="Left" Margin="5"/>
+        <Label x:Name="TitlePageLabel" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"/>
     </Grid>
 </Window>
