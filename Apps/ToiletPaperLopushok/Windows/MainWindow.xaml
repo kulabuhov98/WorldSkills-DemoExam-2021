@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToiletPaperLopushok"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" MinHeight="500" MinWidth="800" FontFamily="Gabriola">
+        Title="MainWindow" Height="849" Width="800" MinHeight="849" MinWidth="800" FontFamily="Gabriola">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
