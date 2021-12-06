@@ -9,6 +9,77 @@
       Title="ViewPage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical">
+            <Label Content="Поиск:"/>
+            <TextBox x:Name="SearchTextBox" Margin="5 0 5 0" Padding="2"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical">
+            <Label Content="Сортировка:"/>
+            <ComboBox x:Name="SortingComboBox" Margin="5 0 5 0" Padding="2"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Vertical">
+            <Label Content="Фильтрация:"/>
+            <ComboBox x:Name="FilteringComboBox" Margin="5 0 5 0" Padding="2"/>
+        </StackPanel>
+
+        <ListView x:Name="MainListView" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+
+                            <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+                                <Image.Source>
+                                    <Binding Path="Image">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>/Resources/DefaultImage.png</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+
+                            <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" 
+                                        Orientation="Vertical" VerticalAlignment="Top" Margin="10 30 0 0">
+                                <TextBlock FontSize="16" FontWeight="Bold" Margin="0 0 0 5">
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} | {1}">
+                                            <Binding Path="AgentType.Title"/>
+                                            <Binding Path="Title"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                                <TextBlock Text="{Binding ArticleNumber}" Margin="0 0 0 5"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

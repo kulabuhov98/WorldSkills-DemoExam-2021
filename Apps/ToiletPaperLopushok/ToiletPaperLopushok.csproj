@@ -81,10 +81,54 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\Manager.cs" />
+    <Compile Include="Model\Agent.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AgentPriorityHistory.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AgentType.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Material.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MaterialCountHistory.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MaterialType.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Product.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProductCostHistory.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProductMaterial.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProductSale.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProductType.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Shop.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Supplier.cs">
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\ToiletPaperLopushokModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ToiletPaperLopushokModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ToiletPaperLopushokModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToiletPaperLopushokModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ToiletPaperLopushokModel.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -147,6 +191,12 @@
     <Content Include="Model\ToiletPaperLopushokModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ToiletPaperLopushokModel.Context.cs</LastGenOutput>
+      <DependentUpon>ToiletPaperLopushokModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\ToiletPaperLopushokModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ToiletPaperLopushokModel.edmx</DependentUpon>
+      <LastGenOutput>ToiletPaperLopushokModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
